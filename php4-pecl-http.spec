@@ -2,13 +2,13 @@
 %define		_fmodname	pecl_http
 %define		_status		beta
 %define		_sysconfdir	/etc/php4
-%define		extensionsdir	%(php4-config --extension-dir 2>/dev/null)
+%define		extensionsdir	%(php-config --extension-dir 2>/dev/null)
 
 Summary:	%{_modname} - extended HTTP support
 Summary(pl):	%{_modname} - rozszerzona obs³uga protoko³u HTTP
 Name:		php4-pecl-%{_modname}
 Version:	0.13.0
-Release:	2
+Release:	3
 License:	PHP 3.0
 Group:		Development/Languages/PHP
 Source0:	http://pecl.php.net/get/%{_fmodname}-%{version}.tgz
