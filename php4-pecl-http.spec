@@ -8,16 +8,17 @@ Summary:	%{_modname} - extended HTTP support
 Summary(pl):	%{_modname} - rozszerzona obs³uga protoko³u HTTP
 Name:		php4-pecl-%{_modname}
 Version:	0.13.0
-Release:	1
+Release:	2
 License:	PHP 3.0
 Group:		Development/Languages/PHP
 Source0:	http://pecl.php.net/get/%{_fmodname}-%{version}.tgz
 # Source0-md5:	97d867fced7c93b7b6e016044faa7579
 URL:		http://pecl.php.net/package/pecl_http/
-BuildRequires:	libtool
 BuildRequires:	php4-devel >= 3:4.3.0
-Requires:	%{_sysconfdir}/conf.d
+BuildRequires:	mhash-devel
+BuildRequires:	rpmbuild(macros) >= 1.230
 %requires_eq_to php4-common php4-devel
+Requires:	%{_sysconfdir}/conf.d
 Obsoletes:	php-pear-%{_modname}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
