@@ -14,8 +14,8 @@ Group:		Development/Languages/PHP
 Source0:	http://pecl.php.net/get/%{_fmodname}-%{version}.tgz
 # Source0-md5:	97d867fced7c93b7b6e016044faa7579
 URL:		http://pecl.php.net/package/pecl_http/
-BuildRequires:	php4-devel >= 3:4.3.0
 BuildRequires:	mhash-devel
+BuildRequires:	php4-devel >= 3:4.3.0
 BuildRequires:	rpmbuild(macros) >= 1.230
 %requires_eq_to php4-common php4-devel
 Requires:	%{_sysconfdir}/conf.d
@@ -32,9 +32,11 @@ Currently implemented features:
   ETag generation from buffered output)
 - Sending data/files/streams with (multiple) ranges support
 - Negotiating user preferred language/charset
-- Convenient request functions to HEAD/GET/POST if libcurl is available
+- Convenient request functions to HEAD/GET/POST if libcurl is
+  available
 - HTTP auth hooks (Basic)
-- PHP5 classes: HttpUtil, HttpResponse, HttpRequest, HttpRequestPool, HttpMessage
+- PHP5 classes: HttpUtil, HttpResponse, HttpRequest, HttpRequestPool,
+  HttpMessage
 
 In PECL status of this extension is: %{_status}.
 
@@ -50,7 +52,8 @@ Aktualnie zaimplementowane mo¿liwo¶ci:
 - negocjacja preferowanego przez u¿ytkownika jêzyka/zestawu znaków
 - wygodne funkcje do ¿±dañ HEAD/GET/POST je¶li dostêpna jest libcurl
 - wywo³ania HTTP auth (Basic)
-- klasy PHP5: HttpUtil, HttpResponse, HttpRequest, HttpRequestPool, HttpMessage
+- klasy PHP5: HttpUtil, HttpResponse, HttpRequest, HttpRequestPool,
+  HttpMessage
 
 To rozszerzenie ma w PECL status: %{_status}.
 
@@ -89,5 +92,5 @@ fi
 %files
 %defattr(644,root,root,755)
 %doc %{_fmodname}-%{version}/{docs,EXPERIMENTAL}
-%config(noreplace) %verify(not size mtime md5) %{_sysconfdir}/conf.d/%{_modname}.ini
+%config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/conf.d/%{_modname}.ini
 %attr(755,root,root) %{extensionsdir}/%{_modname}.so
