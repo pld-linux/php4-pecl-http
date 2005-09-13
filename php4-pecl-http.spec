@@ -16,8 +16,8 @@ Source0:	http://pecl.php.net/get/%{_fmodname}-%{version}.tgz
 URL:		http://pecl.php.net/package/pecl_http/
 BuildRequires:	mhash-devel
 BuildRequires:	php4-devel >= 3:4.3.0
-BuildRequires:	rpmbuild(macros) >= 1.230
-%requires_eq_to php4-common php4-devel
+BuildRequires:	rpmbuild(macros) >= 1.238
+%requires_php_extension
 Requires:	%{_sysconfdir}/conf.d
 Obsoletes:	php-pear-%{_modname}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
