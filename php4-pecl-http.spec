@@ -1,18 +1,18 @@
 %define		_modname	http
 %define		_fmodname	pecl_http
-%define		_status		beta
+%define		_status		stable
 %define		_sysconfdir	/etc/php4
 %define		extensionsdir	%(php-config --extension-dir 2>/dev/null)
 
 Summary:	%{_modname} - extended HTTP support
 Summary(pl):	%{_modname} - rozszerzona obs³uga protoko³u HTTP
 Name:		php4-pecl-%{_modname}
-Version:	0.18.1
+Version:	1.0.1
 Release:	1
-License:	PHP 3.0
+License:	BSD
 Group:		Development/Languages/PHP
 Source0:	http://pecl.php.net/get/%{_fmodname}-%{version}.tgz
-# Source0-md5:	17168c78aff93dcddae9dc1bf4cb1dc6
+# Source0-md5:	3246a4a1fb9297f91abd8585ee98ae7d
 URL:		http://pecl.php.net/package/pecl_http/
 BuildRequires:	mhash-devel
 BuildRequires:	php4-devel >= 3:4.3.0
@@ -23,7 +23,18 @@ Obsoletes:	php-pear-%{_modname}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Currently implemented features:
+This HTTP extension aims to provide a convenient and powerful set of
+functionality for one of PHPs major applications.
+
+It eases handling of HTTP urls, dates, redirects, headers and
+messages, provides means for negotiation of clients preferred language
+and charset, as well as a convenient way to send any arbitrary data
+with caching and resuming capabilities.
+
+It provides powerful request functionality, if built with CURL
+support. Parallel requests are available for PHP 5 and greater.
+
+Currently implemented features include:
 - Building absolute URIs
 - RFC compliant HTTP redirects
 - RFC compliant HTTP date handling
@@ -41,7 +52,19 @@ Currently implemented features:
 In PECL status of this extension is: %{_status}.
 
 %description -l pl
-Aktualnie zaimplementowane mo¿liwo¶ci:
+To rozszerzenie HTTP ma na celu dostarczenie wygodnego i potê¿nego
+zestawu funkcjonalno¶ci do jednego z najwa¿niejszych zastosowañ PHP.
+
+U³atwia obs³ugê adresów HTTP, dat, przekierowañ, nag³ówków i
+wiadmo¶ci, dostarcza sposób do negocjacji preferowana jêzyka i strony
+kodowej klienta, jak równie¿ wygodnego sposobu do wysy³ania dowolnego
+rodzaju danych z mo¿liwo¶ci± keszowania oraz wznawiania transferów.
+
+Rozszerzenie dostracza potê¿ne mo¿liwo¶ci zapytañ, je¶li zbudowane
+jest ze wsparciem dla CURL. Równoleg³e zapytania s± dostêpne od wersji
+PHP 5.
+
+Aktualnie zaimplementowane mo¿liwo¶ci to miêdzy innymi:
 - tworzenie bezwzglêdnych URI
 - zgodne z RFC przekierowania HTTP
 - zgodna z RFC obs³uga daty HTTP
@@ -91,6 +114,6 @@ fi
 
 %files
 %defattr(644,root,root,755)
-%doc %{_fmodname}-%{version}/{docs,EXPERIMENTAL}
+%doc %{_fmodname}-%{version}/{KnownIssues.txt,docs}
 %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/conf.d/%{_modname}.ini
 %attr(755,root,root) %{extensionsdir}/%{_modname}.so
