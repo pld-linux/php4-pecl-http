@@ -7,12 +7,12 @@
 Summary:	%{_modname} - extended HTTP support
 Summary(pl):	%{_modname} - rozszerzona obs³uga protoko³u HTTP
 Name:		php4-pecl-%{_modname}
-Version:	1.2.1
+Version:	1.3.3
 Release:	1
 License:	BSD
 Group:		Development/Languages/PHP
 Source0:	http://pecl.php.net/get/%{_fmodname}-%{version}.tgz
-# Source0-md5:	3150801cf6ca51d780b459e96b8d3c44
+# Source0-md5:	96c16435936eab288d5fdd5750e3f863
 URL:		http://pecl.php.net/package/pecl_http/
 BuildRequires:	mhash-devel
 BuildRequires:	php4-devel >= 3:4.3.0
