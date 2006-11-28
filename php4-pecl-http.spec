@@ -14,7 +14,6 @@ Group:		Development/Languages/PHP
 Source0:	http://pecl.php.net/get/%{_fmodname}-%{version}.tgz
 # Source0-md5:	96c16435936eab288d5fdd5750e3f863
 URL:		http://pecl.php.net/package/pecl_http/
-BuildRequires:	mhash-devel
 BuildRequires:	php4-devel >= 3:4.3.0
 BuildRequires:	rpmbuild(macros) >= 1.322
 %{?requires_php_extension}
