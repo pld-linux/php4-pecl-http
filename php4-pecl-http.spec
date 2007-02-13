@@ -5,7 +5,7 @@
 %define		extensionsdir	%(php-config --extension-dir 2>/dev/null)
 
 Summary:	%{_modname} - extended HTTP support
-Summary(pl.UTF-8):   %{_modname} - rozszerzona obsługa protokołu HTTP
+Summary(pl.UTF-8):	%{_modname} - rozszerzona obsługa protokołu HTTP
 Name:		php4-pecl-%{_modname}
 Version:	1.3.3
 Release:	1
