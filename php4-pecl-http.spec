@@ -7,7 +7,7 @@ Summary:	%{_modname} - extended HTTP support
 Summary(pl.UTF-8):	%{_modname} - rozszerzona obsługa protokołu HTTP
 Name:		php4-pecl-%{_modname}
 Version:	1.3.3
-Release:	3
+Release:	4
 License:	BSD
 Group:		Development/Languages/PHP
 Source0:	http://pecl.php.net/get/%{_fmodname}-%{version}.tgz
